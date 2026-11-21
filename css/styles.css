@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colores principales */
+    --color-primary: #C62828;
+    --color-primary-dark: #991B1B;
+
+    /* Colores neutros */
+    --color-dark: #171717;
+    --color-white: #FFFFFF;
+    --color-light: #F2F2F2;
+    --color-gray: #737373;
+}
+
+html,
+body{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    background: var(--color-light);
+    color: var(--color-dark);
+}
+
+h1,
+h2,
+h3{
+    font-weight: 700;
+}
+
+p{
+    line-height: 1.7;
+    color: var(--color-gray);
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.topbar{
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 10px 50px;
+}
+
+.contacto{
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+.contacto a{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-white);
+    text-decoration: none;
+    transition: opacity var(--transicion);
+}
+
+.contacto a:hover{
+    opacity: .8;
+}
+
+.navbar{
+    background: var(--color-white);
+    box-shadow: 0 2px 10px rgba(0,0,0,.05);
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+.navbar .logo{
+    width: 60px;
+    height: 60px;
+}
+
+.menu-toggle{
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.menu-toggle i{
+    color: var(--color-gray);
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar a{
+    text-decoration: none;
+}
+
+.navbar ul li a{
+    color: var(--color-gray);
+    font-weight: 600;
+    transition: color var(--transicion);
+}
+
+.navbar ul li a:hover{
+    color: var(--color-primary);
+}
+
+.btn-consulta{
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background var(--transicion);
+}
+
+.btn-consulta:hover{
+    background: var(--color-primary-dark);
+}
