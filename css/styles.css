@@ -46,49 +46,57 @@ p{
    HEADER
 =========================== */
 
-.topbar{
-    background: var(--color-primary);
+.topbar {
+    background: var(--color-dark);
     color: var(--color-white);
-    padding: 10px 50px;
+    padding: 10px 0;
 }
 
-.contacto{
+.contacto {
     display: flex;
     justify-content: flex-end;
     gap: 25px;
 }
 
-.contacto a{
+.contacto a {
     display: flex;
     align-items: center;
     gap: 8px;
     color: var(--color-white);
     text-decoration: none;
     transition: opacity var(--transicion);
+    font-size: 0.9rem;
 }
 
-.contacto a:hover{
-    opacity: .8;
+.contacto a:hover {
+    opacity: 0.8;
 }
 
-.navbar{
+/* NAVBAR */
+
+.navbar {
     background: var(--color-white);
-    box-shadow: 0 2px 10px rgba(0,0,0,.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-.navbar-container{
+.navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
+    padding: 12px 50px;
 }
 
-.navbar .logo{
-    width: 60px;
-    height: 60px;
+/* LOGO */
+
+.navbar .logo {
+    width: 160px;
+    max-height: 65px;
+    object-fit: contain;
 }
 
-.menu-toggle{
+/* BOTÓN MENÚ MÓVIL */
+
+.menu-toggle {
     display: none;
     background: none;
     border: none;
@@ -96,39 +104,179 @@ p{
     cursor: pointer;
 }
 
-.menu-toggle i{
-    color: var(--color-gray);
+.menu-toggle i {
+    color: var(--color-dark);
 }
 
-.navbar ul{
+/* ENLACES */
+
+.navbar ul {
     display: flex;
+    align-items: center;
     list-style: none;
     gap: 30px;
 }
 
-.navbar a{
+.navbar a {
     text-decoration: none;
 }
 
-.navbar ul li a{
-    color: var(--color-gray);
+.navbar ul li a {
+    color: var(--color-dark);
     font-weight: 600;
     transition: color var(--transicion);
 }
 
-.navbar ul li a:hover{
+.navbar ul li a:hover {
     color: var(--color-primary);
 }
 
-.btn-consulta{
+/* BOTÓN CONSULTA */
+
+.btn-consulta {
     background: var(--color-primary);
     color: var(--color-white);
     padding: 12px 22px;
-    border-radius: 30px;
+    border-radius: 6px;
     font-weight: 600;
     transition: background var(--transicion);
 }
 
-.btn-consulta:hover{
+.btn-consulta:hover {
     background: var(--color-primary-dark);
+}
+
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero {
+    min-height: 650px;
+    background-image: url("../img/hero-fortech.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-overlay {
+    min-height: 650px;
+    background: linear-gradient(
+        90deg,
+        rgba(23, 23, 23, 0.90) 0%,
+        rgba(23, 23, 23, 0.70) 55%,
+        rgba(23, 23, 23, 0.20) 100%
+    );
+}
+
+.hero-container {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 60px 20px;
+}
+
+.hero-subtitle {
+    color: var(--color-primary);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero-text h1 {
+    color: var(--color-white);
+    font-size: 3.5rem;
+    line-height: 1.15;
+}
+
+.hero-text h1 span {
+    color: var(--color-primary);
+}
+
+.hero-text p {
+    color: var(--color-light);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+/* Botones */
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn-principal,
+.btn-secundario {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-principal {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-principal:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-3px);
+}
+
+.btn-secundario {
+    background: transparent;
+    border: 2px solid var(--color-white);
+    color: var(--color-white);
+}
+
+.btn-secundario:hover {
+    background: var(--color-white);
+    color: var(--color-dark);
+}
+
+@media (max-width: 768px) {
+
+    .hero,
+    .hero-overlay,
+    .hero-container {
+        min-height: 550px;
+    }
+
+    .hero-overlay {
+        background: rgba(23, 23, 23, 0.75);
+    }
+
+    .hero-text {
+        padding: 50px 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-buttons a {
+        text-align: center;
+    }
 }
