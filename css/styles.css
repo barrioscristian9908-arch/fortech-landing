@@ -379,6 +379,60 @@ p{
     margin-right: 8px;
 }
 
+
+/* ===========================
+   VENTAJAS
+=========================== */
+
+.ventajas-subtitle {
+    display: inline-block;
+    color: var(--color-primary);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.ventajas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.card-ventaja {
+    background: var(--color-white);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    transition: transform var(--transicion),
+                box-shadow var(--transicion);
+}
+
+.card-ventaja:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card-ventaja i {
+    display: inline-block;
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+}
+
+.card-ventaja h3 {
+    margin-bottom: 8px;
+    color: var(--color-dark);
+}
+
+.card-ventaja p {
+    color: var(--color-gray);
+    line-height: 1.6;
+}
+
+
+
 @media (max-width: 768px) {
 
     .hero,
