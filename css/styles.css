@@ -54,13 +54,13 @@ p{
     padding: 10px 0;
 }
 
-.contacto {
+.contacto-topbar {
     display: flex;
     justify-content: flex-end;
     gap: 25px;
 }
 
-.contacto a {
+.contacto-topbar a {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -70,7 +70,7 @@ p{
     font-size: 0.9rem;
 }
 
-.contacto a:hover {
+.contacto-topbar a:hover {
     opacity: 0.8;
 }
 
