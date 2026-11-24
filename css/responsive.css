@@ -274,6 +274,60 @@
         max-height: 50px;
     }
 
+    /* Menu Responsive */
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .btn-consulta {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 28px;
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--color-white);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: all .35s ease;
+        z-index: 999;
+    }
+
+    .nav-links.activo {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .menu-toggle {
+        color: var(--color-dark);
+        width: 44px;
+        height: 44px;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        background: transparent;
+        border: none;
+        border-radius: 0;
+
+        font-size: 1.8rem;
+        cursor: pointer;
+
+        position: relative;
+        z-index: 1002;
+    }
+
 
     /* HERO */
 
