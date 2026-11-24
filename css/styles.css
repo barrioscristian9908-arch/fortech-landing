@@ -655,3 +655,82 @@ p{
 .footer-bottom small {
     color: var(--color-primary);
 }
+
+
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #25d366 0%, #1ea952 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    text-decoration: none;
+    box-shadow: 0 12px 28px rgba(37, 211, 102, .3);
+    z-index: 1500;
+    animation: pulse-wsp 2.2s infinite;
+    transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 16px 34px rgba(37, 211, 102, .4);
+}
+
+.back-to-top {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--color-dark);
+    color: var(--color-white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.4rem;
+    text-decoration: none;
+    
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1500;
+
+    animation: pulse-wsp 2.2s infinite;
+
+
+    transition: transform var(--transicion),
+            background var(--transicion),
+            opacity var(--transicion),
+            visibility var(--transicion);
+}
+
+.back-to-top:hover {
+    background: var(--color-primary);
+    transform: translateY(-4px);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+@keyframes pulse-wsp {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}

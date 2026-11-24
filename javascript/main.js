@@ -36,3 +36,27 @@
         });
 
     });
+
+
+
+
+    const scrollToTopButton = document.querySelector('#scrollToTop');
+
+    window.addEventListener('scroll', () => {
+
+        if (document.documentElement.scrollTop > 100) {
+            scrollToTopButton.classList.add('visible');
+        } else {
+            scrollToTopButton.classList.remove('visible');
+        }
+
+    });
+
+    scrollToTopButton.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
